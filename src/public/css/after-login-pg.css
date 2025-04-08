@@ -1,135 +1,180 @@
-body{
+/* General Styling */
+body {
 	background-color: #aaaaaa;
 	background-size: cover;
 	background-repeat: no-repeat;
-	font: 14px/1.7 "Open Sans",Helvetica,Arial,sans-serif;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 14px;
 	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
-header{
+/* Header */
+header {
 	text-align: center;
-	font-style: algerian,calibri ;
+	margin-top: 15px;
 	color: white;
-	margin-top: -2.5%;
-
-}
-footer{
-	display: inline-block;
-	text-align: center;
-	border-bottom: 2px solid white;
-	color: white;
-	position: absolute;
-	bottom: 10px;
-	left: 400px;
-
 }
 
-a{
-	color:white;
-	text-decoration: none;
-}
-
-a:hover{
-	color:black;
+.IndianRailways {
+	color: black;
+	font-size: 2.5rem;
+	font-family: monospace;
 	text-shadow: 0.5px 0.5px red;
-	
+	margin-bottom: 10px;
 }
 
-.main{
+/* Navigation Buttons */
+.main {
 	color: white;
-	display:inline-block;
-	margin:35px 280px;
-	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 15px;
+	margin: 20px auto;
+	padding: 10px;
 }
 
- .st , .ps , .rs , .sn{
-	border:2px solid black;
-	margin-right: 25px;
+.st, .ps, .rs, .sn {
+	border: 2px solid black;
 	background-color: #696969;
 	border-radius: 4px;
 	box-shadow: 1px 1px red;
+	padding: 10px 35px;
+	transition: transform 0.2s ease;
 }
 
-.login{
-	margin-left:1300px;
-	top:4%;
+.st:hover, .ps:hover, .rs:hover, .sn:hover {
+	transform: scale(1.05);
+}
+
+/* Login Buttons */
+.login {
 	position: absolute;
+	top: 20px;
+	right: 30px;
+	display: flex;
+	gap: 10px;
 }
 
-.st,.rs,.ps{
-	padding:10px 40px 
-}
-
-.sn{
-	padding:10px 35px 
-}
-
-.sin,.sup{
-	/*margin-top: -10%;*/
-	border:2px solid black;
-	padding:5px 10px;
+.sin, .sup {
+	border: 2px solid black;
+	padding: 5px 10px;
 	border-radius: 4px;
 	background-color: #696969;
 	box-shadow: 1px 1px green;
 }
-.sup a:hover,.sin a:hover{
-	color:black;
-	text-shadow: 1px 1px green;	
-}
-/*.TrainForm{
-	background-color: #fff;
-    display: flex;
-    height: 75px;
-    border-radius: 3px;
-}*/
 
-.SearchTrainForm .InputCntr{
-	/*margin-left: 650px; 
-	margin-top: 255px;
-	background-color: white;
-	display: inline-block;
-	border: 2px solid white;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-left: 1.5px;
-	padding-right: 1.5px;*/
-	background-color: #Fff;
-    width: 300px;
-    
-    margin: 10% auto 0;
-    text-align: -webkit-center;
-    border-radius: 40px; 
-    padding: 50px 5px;
+.sin a, .sup a {
+	color: white;
+	text-decoration: none;
+}
 
-
-}
-.inputs{
-	width:70%;
-	border-radius: 5px;
-	padding: 5px 2px;
-}
-.chkst{
-	color: green;
-	margin right: 37%;
-	margin-bottom: 5%;
-}
-.InputLabel{
-	border-bottom: 2px black;
-	color: solid white;
-	padding-bottom: 2px;
-}
-.st-btn{
-	width: 50%;
-    border-radius: 20px;
-    padding: 5px;
-    background: #32CC35;
-    margin-top: 5%;
-    
-}
-.IndianRailways {
+.sin a:hover, .sup a:hover {
 	color: black;
-	font-size: 50px;
-	font-family: Arial;
+	text-shadow: 1px 1px green;
+}
+
+/* Form Styling */
+.SearchTrainForm .InputCntr {
+	background-color: #fff;
+	width: 300px;
+	max-width: 90%;
+	margin: 40px auto 20px;
+	text-align: center;
+	border-radius: 25px;
+	padding: 30px 20px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.inputs {
+	width: 80%;
+	border-radius: 5px;
+	padding: 8px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+}
+
+.InputLabel {
+	color: white;
+	padding-bottom: 5px;
+	display: block;
+	font-weight: bold;
+}
+
+/* Button */
+.st-btn {
+	width: 60%;
+	border-radius: 20px;
+	padding: 10px;
+	background: #32CC35;
+	color: white;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	margin-top: 10px;
+	transition: background-color 0.3s;
+}
+
+.st-btn:hover {
+	background-color: #28a428;
+}
+
+/* Footer */
+footer {
+	margin-top: auto;
+	padding: 10px 0;
+	text-align: center;
+	border-top: 2px solid black;
+	background-color: #e0e0e0;
+	color: black;
+	font-size: 14px;
+}
+
+/* Links */
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	color: black;
 	text-shadow: 0.5px 0.5px red;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+	.IndianRailways {
+		font-size: 2rem;
+	}
+
+	.main {
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
+		margin-top: 10px;
+	}
+
+	.login {
+		position: static;
+		justify-content: center;
+		margin-top: 10px;
+	}
+
+	.SearchTrainForm .InputCntr {
+		width: 90%;
+		padding: 20px 10px;
+	}
+
+	.inputs {
+		width: 90%;
+	}
+
+	.st-btn {
+		width: 80%;
+	}
+}

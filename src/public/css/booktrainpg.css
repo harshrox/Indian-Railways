@@ -1,43 +1,58 @@
-body{
+/* General Styles */
+body {
 	background-color: #aaaaaa;
 	background-size: auto;
 	background-repeat: no-repeat;
-	font: 14px/1.7 "Open Sans",Helvetica,Arial,sans-serif;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 14px;
 	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
-header{
+/* Header */
+header {
 	text-align: center;
-	font-style: algerian,calibri ;
+	margin-top: 20px;
 	color: white;
-	margin-top: -2.5%;
-
 }
+
 .IndianRailways {
 	color: black;
-	font-size: 50px;
-	font-family: Arial;
+	font-size: 2.5rem;
+	font-family: Arial, sans-serif;
 	text-shadow: 0.5px 0.5px red;
+	margin: 10px 0;
 }
 
-footer{
-	display: inline-block;
-	text-align: center;
-	border-bottom: 2px solid white;
+/* Links */
+a {
 	color: white;
-	position: absolute;
-	bottom: 10px;
-	left: 400px;
-
-}
-
-a{
-	color:white;
 	text-decoration: none;
 }
 
-a:hover{
-	color:black;
+a:hover {
+	color: black;
 	text-shadow: 0.5px 0.5px red;
-	
+}
+
+/* Footer */
+footer {
+	margin-top: auto;
+	text-align: center;
+	padding: 10px 0;
+	border-top: 2px solid white;
+	background-color: #444;
+	color: white;
+	font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.IndianRailways {
+		font-size: 2rem;
+	}
 }
