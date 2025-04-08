@@ -43,6 +43,11 @@
             <th style="padding: 10px;"> <label><strong>Time</strong></label> </th>
             <th style="padding: 10px;"> <label><strong>
                         <!--<img src="/css/phone-logo.png" width="3%">--> Phone Number</strong></label> </th>
+            <th style="padding: 10px;"> <label><strong>Station Name</strong></label> </th>
+            <th style="padding: 10px;"> <label><strong>Train Name</strong></label> </th>
+            <th style="padding: 10px;"> <label><strong>Train No</strong></label> </th>
+            <th style="padding: 10px;"> <label><strong>Route</strong></label> </th>
+            <th style="padding: 10px;"> <label><strong>Platforms</strong></label> </th>
 
         </tr>
 
@@ -63,6 +68,21 @@
             <td style="padding: 10px;">
                 <!-- <textarea readonly name='date'> -->{{this.phNo}}
                 <!-- </textarea> -->
+            </td>
+            <td style="padding: 10px;">
+                {{this.station.stName}} <!-- Station Name -->
+            </td>
+            <td style="padding: 10px;">
+                {{this.station.trainName}} <!-- Train Name -->
+            </td>
+            <td style="padding: 10px;">
+                {{this.station.trainNo}} <!-- Train Number -->
+            </td>
+            <td style="padding: 10px;">
+                {{this.station.origin}} → {{this.station.destination}} <!-- Origin to Destination -->
+            </td>
+            <td style="padding: 10px;">
+                Platforms: {{this.station.noOfPlatform}}
             </td>
 
 
